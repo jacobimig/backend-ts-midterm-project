@@ -1,0 +1,23 @@
+<div class="all-pet-page">
+    <h1>All pets</h1>
+    <ul class="all-pets">
+        {{#each petList}}
+        <li>
+            <div class="pet-img" style="background-image: url({{imgUrl}})"></div>
+            <div class="pet-info">
+                <h2>{{name}}</h2>
+                <div class="pet-links">
+                    <a href="/pets/{{id}}">Learn More</a>
+                    <a href="/pets/edit/{{id}}">Edit Pet</a>
+                </div>
+                <form action="/pets/delete/{{id}}" method="POST">
+                    <button type="submit">Delete Pet</button>
+                </form>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    <div class="btn-container">
+        <a class="bottom-link" href="/pets/new">Add New Pet</a>
+    </div>
+</div>

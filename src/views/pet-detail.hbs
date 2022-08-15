@@ -1,0 +1,16 @@
+<div class="pet-detail-page">
+    {{#with foundPet}} 
+        <img src="{{imgUrl}}" alt="{{name}}" />
+        <div class="pet-detail-content">
+            <section>
+                <h1>{{name}}</h1>
+                <ul id="cuteness-level" class="{{cutenessLevel}}"><i class="fa-solid fa-star"></i></ul>
+            </section>
+            <p class="desc">{{description}}</p>
+    {{/with}}
+        <div class="pet-detail-links">
+            <a href="/pets">View All Pets</a>
+            <a href="/pets/edit/{{foundPet.id}}">Edit Pet</a>
+        </div>
+    </div>
+</div>

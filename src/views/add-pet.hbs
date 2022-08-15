@@ -1,0 +1,16 @@
+<div class="add-pet-page">
+    <h1>Add a new pet</h1>
+    <form action='/pets/new' method="POST">
+        <label for="name">Enter Pet Name: </label>
+        <input type="text" name="name" placeholder="Enter Name" />
+        <label for="description">Enter Pet Description: </label>
+        <input type="text" name="description" placeholder="Enter Description" /><br>
+        <label for="imgUrl">Enter Pet Image Url: </label>
+        <input type="text" name="imgUrl" placeholder="/pet-image.jpg" />
+        <label for="cutenessLevel">Enter Pet Cuteness: (between 1 and 10)</label>
+        <input type="number" name="cutenessLevel" placeholder="10" min="1" max="10" step="1" /><br>
+        <button type="submit">Add Pet</button>
+    </form>
+
+    <a class="view-all" href="/pets">View all pets</a>
+</div>
